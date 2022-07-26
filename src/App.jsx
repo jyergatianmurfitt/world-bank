@@ -17,7 +17,7 @@ function App() {
   }, []);
   
   useEffect(() => {
-    const selectedCountriesData = allData && allData.length &&      allData.filter(country => selectedCountries.includes(country.name)).map(country => ({'country': country.name, 'capital': country.capitalCity, 'incomeLevel': country.incomeLevel.value, 'lendingType': country.lendingType.value, 'region': country.region.value}))
+    const selectedCountriesData = allData && allData.length && allData.filter(country => selectedCountries.includes(country.name)).map(country => ({'country': country.name, 'capital': country.capitalCity, 'incomeLevel': country.incomeLevel.value, 'lendingType': country.lendingType.value, 'region': country.region.value}))
     
     setTableData(selectedCountriesData)
   }, [selectedCountries]);
@@ -29,7 +29,7 @@ function App() {
       {allData && allData.length && 
         <div>
           <Dropdown options={countryOptions} placeholder='Choose a country' onChange={(_, t) => setSelectedCountries(t.value)} basic clearable selection fluid multiple search/>
-          <DataTable data={tableData}></DataTable>
+          <DataTable countryData={tableData}></DataTable>
         </div>
       }
     </div>

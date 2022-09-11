@@ -1,4 +1,4 @@
-# Memory Game
+# World Bank API
 This is a simple React app running on Node and consuming the World Bank API. The table is fully sortable and enables users to select countries to view their data.
 
 ## Tech/framework used
